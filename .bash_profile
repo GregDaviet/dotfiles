@@ -18,7 +18,7 @@ function color_my_prompt {
   local __cur_location="$BLUE\W"           # capital 'W': current directory, small 'w': full file path
   local __git_branch_color="$GREEN"
   local __prompt_tail="$VIOLET$"
-  local __user_input_color="$GREEN"
+  local __user_input_color="$LIGHT_GRAY"
   local __git_branch=$(__git_ps1); 
   
   # colour branch name depending on state
@@ -33,7 +33,9 @@ function color_my_prompt {
   fi
    
   # Build the PS1 (Prompt String)
-  PS1="$__user_and_host $__cur_location$__git_branch_color$__git_branch $__prompt_tail$__user_input_color "
+  # Original script prompt
+  # PS1="$__user_and_host $__cur_location$__git_branch_color$__git_branch $__prompt_tail$__user_input_color "
+  PS1="$__cur_location$__git_branch_color$__git_branch $__prompt_tail$__user_input_color "
 }
  
 # configure PROMPT_COMMAND which is executed each time before PS1
