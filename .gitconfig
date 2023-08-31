@@ -3,3 +3,5 @@
 	email = Greg@DixieRanch.com
 [alias]
 	co = checkout
+[pull]
+	rebase = false
