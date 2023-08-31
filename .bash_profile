@@ -1,5 +1,8 @@
 export PATH="${HOME}/bin:$PATH"
 
+# Tab completion for branch names
+source ~/.git-completion.bash
+
 # store colors
 MAGENTA="\[\033[0;35m\]"
 YELLOW="\[\033[01;33m\]"
