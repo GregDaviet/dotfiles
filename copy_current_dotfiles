@@ -1,0 +1,6 @@
+tracked_dotfiles=`find . -maxdepth 1 -type f | grep "/\." | sed 's/^\.\///g' | sort`
+for filename in $tracked_dotfiles;
+do
+  filename="${HOME}/${filename}"
+  cp $filename .
+done
