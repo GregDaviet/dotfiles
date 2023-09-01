@@ -17,5 +17,6 @@ alias la='ls -A'
 alias l='ls -CF'
 
 alias g='grep -i'
-alias get='curl -OL'
-
+get() {
+    curl -o "$2" -OL "$1" 
+}
