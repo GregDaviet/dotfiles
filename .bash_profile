@@ -35,7 +35,7 @@ function color_my_prompt {
   # Build the PS1 (Prompt String)
   # Original script prompt
   # PS1="$__user_and_host $__cur_location$__git_branch_color$__git_branch $__prompt_tail$__user_input_color "
-  PS1="$__cur_location$__git_branch_color$__git_branch $__prompt_tail$__user_input_color "
+  PS1="$VENV$__cur_location$__git_branch_color$__git_branch $__prompt_tail$__user_input_color "
 }
  
 # configure PROMPT_COMMAND which is executed each time before PS1
@@ -50,4 +50,10 @@ if [ -f ~/.git-prompt.sh ]; then
   GIT_PS1_HIDE_IF_PWD_IGNORED=true
   GIT_PS1_SHOWCOLORHINTS=true
   . ~/.git-prompt.sh
+fi
+
+# activate python virtual environment
+if [ -d ".venv" ]; then
+      source ".venv/bin/activate"
+      VENV="(venv)"
 fi
