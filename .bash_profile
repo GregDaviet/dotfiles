@@ -57,3 +57,8 @@ if [ -d ".venv" ]; then
       source ".venv/bin/activate"
       VENV="(venv)"
 fi
+
+# add container specific environment variables
+if [ -f .devcontainer/env_variables ]; then
+  source ".devcontainer/env_variables"
+fi
