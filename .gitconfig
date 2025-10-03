@@ -5,5 +5,3 @@
 	co = checkout
 [pull]
 	rebase = false
-[safe]
-    directory = /workspaces/*
